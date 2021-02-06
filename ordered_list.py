@@ -122,7 +122,9 @@ class OrderedList:
         raise IndexError
     # Node, int -> bool
     def search_helper(self, node, item):
-        if node.next is None:
+        if self.is_empty():
+            return False
+        elif node.next is None:
             if node.item == item:  # when the given node is the last element
                 return True
             return False

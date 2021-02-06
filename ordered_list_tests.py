@@ -82,6 +82,7 @@ class TestLab4(unittest.TestCase):
 
     def test_search(self):
         t_list = OrderedList()
+        self.assertFalse(t_list.search(14))
         t_list.add(10)
         t_list.add(13)
         t_list.add(12)
